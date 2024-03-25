@@ -1,0 +1,58 @@
+<%#
+ Maintained by eSirPlayground <https://www.youtube.com/c/esirplayground>
+ Licensed to the public under the Apache License 2.0.
+-%>
+
+<%+header%>
+
+<h2 name="content"><%:关机%></h2>
+<br />
+
+<p><%:关闭路由器%></p>
+
+<%- local c = require("luci.model.uci").cursor():changes(); if c and next(c) then -%>
+	<p class="alert-message warning"><%:警告：没保存的改动在关机的时候都会丢失！%></p>
+<%- end -%>
+
+<hr />
+
+<script type="text/javascript">//<![CDATA[
+	var tries = 0;
+
+	function ok() {
+		window.location = '<%=controller%>/admin';
+	}
+
+	function check() {
+		if (tries++ < 12)
+			window.setTimeout(ping, 5000);
+		else
+			alert('<%:Device unreachable%>');
+	}
+
+	function ping() {
+		var img = document.createElement('img');
+
+		img.onload = ok;
+		img.onerror = check;
+		img.src = '<%=resource%>/icons/loading.gif?' + Math.random();
+
+		document.getElementById('poweroff-message').innerHTML = '<%:等待设备关闭...%>';
+	}
+
+	function poweroff(button) {
+		button.style.display = 'none';
+		document.getElementById('poweroff-message').parentNode.style.display = '';
+
+		(new XHR()).post('<%=controller%>/admin/system/poweroff/call', { token: '<%=token%>' }, check);
+	}
+//]]></script>
+
+<input class="cbi-button cbi-button-apply" type="button" value="<%:设备关机%>" onclick="poweroff(this)" />
+
+<p class="alert-message" style="display:none">
+	<img src="<%=resource%>/icons/loading.gif" alt="<%:Loading%>" style="vertical-align:middle" />
+	<span id="poweroff-message"><%:路由器关机中...%></span>
+</p>
+
+<%+footer%>
