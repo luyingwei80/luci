@@ -16,7 +16,7 @@ define Package/$(PKG_NAME)
   CATEGORY:=LuCI
   SUBMENU:=3. Applications
   DEPENDS:=
-   TITLE:=LuCI Support for advanced
+   TITLE:=LuCI Support for advanced and filebrowser
    PKGARCH:=all
 endef
 
