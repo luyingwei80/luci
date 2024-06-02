@@ -43,17 +43,15 @@ function handleAction(report, ev) {
 					'click': ui.createHandlerFn(this, function (ev) {
 						let ip = document.getElementById('search').value.trim().toLowerCase();
 						if (ip) {
-							document.getElementById('run').classList.add("spinning");
 							document.getElementById('search').value = ip;
 							document.getElementById('result').textContent = 'The search is running, please wait...';
-							L.resolveDefault(fs.exec_direct('/etc/init.d/banip', ['search', ip])).then(function (res) {
+							return L.resolveDefault(fs.exec_direct('/etc/init.d/banip', ['search', ip])).then(function (res) {
 								let result = document.getElementById('result');
 								if (res) {
 									result.textContent = res.trim();
 								} else {
 									result.textContent = _('No Search results!');
 								}
-								document.getElementById('run').classList.remove("spinning");
 								document.getElementById('search').value = '';
 							})
 						}
@@ -68,7 +66,12 @@ function handleAction(report, ev) {
 		let content, selectOption;
 
 		if (report[1]) {
-			content = JSON.parse(report[1]);
+			try {
+				content = JSON.parse(report[1]);
+			} catch (e) {
+				content = "";
+				ui.addNotification(null, E('p', _('Unable to parse the ruleset file!')), 'error');
+			}
 		} else {
 			content = "";
 		}
@@ -110,16 +113,14 @@ function handleAction(report, ev) {
 					'click': ui.createHandlerFn(this, function (ev) {
 						let set = document.getElementById('set').value;
 						if (set) {
-							document.getElementById('run').classList.add("spinning");
 							document.getElementById('result').textContent = 'The survey is running, please wait...';
-							L.resolveDefault(fs.exec_direct('/etc/init.d/banip', ['survey', set])).then(function (res) {
+							return L.resolveDefault(fs.exec_direct('/etc/init.d/banip', ['survey', set])).then(function (res) {
 								let result = document.getElementById('result');
 								if (res) {
 									result.textContent = res.trim();
 								} else {
 									result.textContent = _('No Search results!');
 								}
-								document.getElementById('run').classList.remove("spinning");
 								document.getElementById('set').value = '';
 							})
 						}
@@ -144,7 +145,12 @@ return view.extend({
 		let content, rowSets, tblSets;
 
 		if (report[0]) {
-			content = JSON.parse(report[0]);
+			try {
+				content = JSON.parse(report[0]);
+			} catch (e) {
+				content = "";
+				ui.addNotification(null, E('p', _('Unable to parse the report file!')), 'error');
+			}
 		} else {
 			content = "";
 		}
