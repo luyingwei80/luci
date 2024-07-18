@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-05-10 07:37+0000\n"
-"Last-Translator: Džiugas J <dziugas1959@hotmail.com>\n"
+"PO-Revision-Date: 2024-07-05 23:48+0000\n"
+"Last-Translator: \"Džiugas Jan.\" <dziugas1959@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsadblock-fast/lt/>\n"
 "Language: lt\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && ("
 "n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:228
 msgid "%s is currently disabled"
@@ -192,7 +192,7 @@ msgstr ""
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:429
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:360
 msgid "Disable"
-msgstr "Išjungti"
+msgstr "Išjungti/Išgalinti"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:462
 msgid "Disable Debugging"
@@ -204,11 +204,11 @@ msgstr "Išjungta/Neįgalinta (-as/-i)"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:423
 msgid "Disabling %s service"
-msgstr "Išjungiama „%s“ tarnyba"
+msgstr "Išjungiama/Išgalinama – „%s“ tarnyba"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:176
 msgid "Dnsmasq Config File URL"
-msgstr "„Dnsmasq“ konfigūracijos failo „URL – Saitas“"
+msgstr "„Dnsmasq“ konfigūracijos failo „URL“ – saitas"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:371
 msgid "Do not add IPv6 entries"
@@ -248,7 +248,7 @@ msgstr "Įjungia/Įgalina derinimo išvestį į „/tmp/adblock-fast.log“."
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:404
 msgid "Enabling %s service"
-msgstr "Įjungiama „%s“ tarnyba"
+msgstr "Įjungiama/Įgalinama – „%s“ tarnyba"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/status/include/70_adblock-fast.js:58
 msgid "Error"
@@ -385,7 +385,7 @@ msgstr "Priversti pakartotinį atsisiuntimą – „%s“ blokų sąrašo"
 msgid "Forces Router DNS use on local devices, also known as DNS Hijacking."
 msgstr ""
 "Priverčia maršrutizatoriaus „DNS“ naudojimą vietiniams įrenginiams, kitaip "
-"žinomas kaip „DNS užgrobimu“."
+"žinomas kaip – „DNS užgrobimu“."
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:288
 msgid "Free ram (%s) is not enough to process all enabled block-lists"
@@ -490,8 +490,8 @@ msgstr ""
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:344
 msgid "Pick the LED not already used in %sSystem LED Configuration%s."
 msgstr ""
-"Pasirinkti „LED“ (Lemputės) kuri nėra naudojama %sSistemos „LED“ (Lemputės) "
-"konfigūracijoje%s."
+"Pasirinkti „LED“ (lemputės/-ę), kuri nėra naudojama %sSistemos „LED“ "
+"(Lemputės) konfigūracijoje%s."
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:293
 msgid "Pick the SmartDNS instance(s) for AdBlocking"
@@ -570,7 +570,7 @@ msgstr "Kai kurie paketai, kurie yra rekomenduojami yra neįdiegti"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:338
 msgid "Start"
-msgstr "Pradėti"
+msgstr "Pradėti/Paleisti"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:110
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/status/include/70_adblock-fast.js:53
@@ -579,7 +579,7 @@ msgstr "Pradedamas/-a"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:332
 msgid "Starting %s service"
-msgstr "Pradedama %s tarnyba"
+msgstr "Pradedama/Paleidžiama – „%s“ tarnyba"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/status/include/70_adblock-fast.js:84
 msgid "Status"
@@ -600,7 +600,7 @@ msgstr "Sustabdytas"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:385
 msgid "Stopping %s service"
-msgstr "Stabdoma „%s“ tarnyba"
+msgstr "Stabdoma – „%s“ tarnyba"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:437
 msgid "Store compressed cache"
@@ -654,13 +654,13 @@ msgstr "„URL“ – Saitas"
 msgid ""
 "URL to the external dnsmasq config file, see the %sREADME%s for details."
 msgstr ""
-"„URL – Saitas“ į išorinį „dnsmasq“ konfigūracijos failą, peržiūrėkite "
+"„URL“ – Saitas į išorinį „dnsmasq“ konfigūracijos failą, peržiūrėkite – "
 "„%sREADME%s“, dėl išsamesnės informacijos."
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:495
 msgid "URLs to file(s) containing lists to be allowed or blocked."
 msgstr ""
-"„URLs – Saitai“ į failą/-us, turinčius leidžiamuosius ar blokuojamuosius "
+"„URLs“ – Saitai į failą/-us, turinčius leidžiamuosius ar blokuojamuosius "
 "sąrašus."
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:506
